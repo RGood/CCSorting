@@ -23,7 +23,7 @@ while(True):
 	try:
 		comments = r.get_comments("all",limit=25)
 		for c in comments:
-			candidated = c.author
+			candidate = c.author
 			if(max(candidate.link_karma,candidate.comment_karma) >= 100000):
 				if(candidate not in centurians):
 					cc.send_message("New Centurian","/u/"+candidate.name)
