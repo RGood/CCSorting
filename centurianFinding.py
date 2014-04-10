@@ -25,8 +25,9 @@ while(True):
 		for c in comments:
 			candidated = c.author
 			if(max(candidate.link_karma,candidate.comment_karma) >= 100000):
-				if(! candidate in centurians):
+				if(candidate not in centurians):
 					cc.send_message("New Centurian","/u/"+candidate.name)
+					print(candidate.name)
 					centurians.insert(0, candidate.name)
 	except KeyboardInterrupt:
 		break
