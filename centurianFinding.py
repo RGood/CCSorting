@@ -13,7 +13,7 @@ print "Getting /r/CenturyClub information."
 cc = r.get_subreddit("CenturyClub")
 
 print("Loading offline Centurian List.")
-file = open("./Created_by_me/CCSorting/centurians.txt", "r")
+file = open("./Created_by_me/CC Lists/centurians.txt", "r")
 centurians = []
 for line in file:
     centurians.append(line.split("\n")[0])
@@ -31,7 +31,7 @@ while(True):
 	except KeyboardInterrupt:
 		break
 				
-file = open("./Created_by_me/CCSorting/centurians.txt", "w")
+file = open("./Created_by_me/CC Lists/centurians.txt", "w")
 for name in centurians:
     file.write(name+"\n")
 file.close()
