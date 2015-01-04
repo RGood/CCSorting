@@ -1,21 +1,15 @@
 import praw
 
-username = '' #Century Club Member's Username
-password = '' #Century Club Member's Password
-
 print "Creating Client."
 r = praw.Reddit("chrome")
-
-print "Logging in."
-r.login(username,password)
 
 print "Getting /r/CenturyClub information."
 cc = r.get_subreddit("CenturyClub")
 
 print "Opening Contributors List."
-ccc = open("./Created_by_me/CC Lists/centurians.txt","r")
+ccc = open("C:/python27/Created_by_me/CC Lists/centurians.txt","r")
 
-shadowbanned = open("./Created_by_me/CC Lists/shadowbanned.txt","w+")
+shadowbanned = open("C:/python27/Created_by_me/CC Lists/shadowbanned.txt","w+")
 
 print "Beginning Redditor Scan..."
 for centurian in ccc:
